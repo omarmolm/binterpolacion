@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Trabajo {{title}}</a>
+</nav>
+<div class="container pt-5">
+    <div class="row">
+        <div class="col">
+            <h3>Listado de Fotos</h3>
+            <app-lista-fotos (fotoSeleccionada)="selecc( $event )"></app-lista-fotos>
+        </div>
+        <div class="col-8">
+            <app-detalle-foto *ngIf="fotoSelecc" [foto]="fotoSelecc"></app-detalle-foto>
+        </div>
+    </div>
+</div>
